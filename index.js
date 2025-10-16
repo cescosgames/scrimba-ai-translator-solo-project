@@ -47,7 +47,8 @@ async function fetchTranslation(userInput, targetLanguage) { // takes our user i
         const response = await client.chat.completions.create({
             model: 'gpt-5-nano',
             messages: messages,
-            temperature: 1.0
+            temperature: 1.0,
+            max_completion_tokens: 300 // can't imagine we'll exceed this num of tokens with only 100 characters allowed to be input
             // presence_penalty: 0, // not really necessary for translation imo
             // frequency_penalty: 0, // not really necessary for translation imo
         })
