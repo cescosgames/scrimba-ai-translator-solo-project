@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+    --color-PGgreen: #32CD32;
+    --color-PGblue: #035A9D;
+    --color-PGwhite: #FFFFFF;
+    --color-PGdarkblue: #252F42;
+    --color-PGblack: #000000;
+} 
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #030712;
+}
+
+.headerText {
+    font-family: "Big Shoulders", sans-serif;
+}
+
+.loader {
+    border: 10px solid var(--color-PGgreen);
+    border-bottom-color: var(--color-PGblue);
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 

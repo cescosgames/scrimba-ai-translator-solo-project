@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PollyGlot AI Powered Translator</title>
+        <meta name="description" content="AI Translator based on practice project from Scrimba">
+        <meta name="keywords" content="AI">
+
+        <link rel="stylesheet" href="index.css">
+        <!-- Project fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io//favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io//favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+    </head>
+    <body>
+        <!-- PollyGlot AI translator -->
+
+        <!-- wrapper (like the phone outline) -->
+        <div class="sm:max-w-sm w-full m-auto sm:mt-20 sm:rounded-t-md"> 
+            <!-- the banner -->
+            <div class="w-full flex h-30 relative justify-center items-center">
+                <!-- top background -->
+                <img src="/assets/worldmap.png" alt="image of world map" class="sm:rounded-t-md sm:h-full w-full absolute z-[-1]">
+                <!-- logo -->
+                <div class="flex gap-5">
+                    <!-- bird -->
+                    <img src="/assets/parrot.png" alt="PollyGlot Parrot Cartoon" class="w-15 aspect-square top-[10%] left-[10%]">
+                    <!-- title box -->
+                    <div class="">
+                        <!-- title -->
+                        <h1 class="text-PGgreen headerText text-3xl font-bold">PollyGlot</h1>
+                        <!-- subtitle -->
+                        <p class="text-PGwhite text-sm">Perfect* Translation Every Time</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- the body -->
+            <div class="bg-PGwhite flex flex-col sm:h-full h-[100vh] sm:rounded-b-md">
+                <!-- the holder area -->
+                <div class="border-2 border-PGblack rounded-md my-5 mx-3 justify-center items-center flex flex-col">
+                    <!-- translate header -->
+                    <p id="instructionHeader" class="text-PGblue font-bold text-sm py-3">Text to translate &#128071;</p>
+                    <!-- input field -->
+                    <!-- label would go here -->
+                    <textarea
+                        id="textToTranslate"
+                        placeholder="Enter Text To Translate"
+                        maxlength="100"
+                        class="bg-gray-100 p-3 rounded-md mx-5 mb-5 h-32 w-[75%] resize-none text-gray-700 placeholder-gray-400 placeholder:text-sm text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
+                    </textarea>
+                    <!-- translate header -->
+                    <p id="languageHeader" class="text-PGblue font-bold text-sm pb-5">Select Language &#128071;</p>
+                    <!-- the language selection form -->
+                    <form id="languageForm" class="flex flex-col space-y-2 w-64 h-24">
+                        <!-- option 1 -->
+                        <label class="flex items-center space-x-2">
+                            <input
+                            type="radio"
+                            name="language"
+                            value="french"
+                            class="text-PGblack focus:ring-PGblue"
+                            />
+                            <span class="text-gray-700 flex gap-3 items-center">
+                                French
+                                <img src="/assets/fr-flag.png" alt="French flag" class="h-5 border-1 border-black">
+                            </span>
+                        </label>
+                        <!-- option 2 -->
+                        <label class="flex items-center space-x-2">
+                            <input
+                            type="radio"
+                            name="language"
+                            value="spanish"
+                            class="text-PGblack focus:ring-PGblue"
+                            />
+                            <span class="text-gray-700 flex gap-3 items-center">
+                                Spanish
+                                <img src="/assets/sp-flag.png" alt="Spanish flag" class="h-5 border-1 border-black">
+                            </span>
+                        </label>
+                        <!-- option 3 -->
+                        <label class="flex items-center space-x-2">
+                            <input
+                            type="radio"
+                            name="language"
+                            value="japanese"
+                            class="text-PGblack focus:ring-PGblue"
+                            />
+                            <span class="text-gray-700 flex gap-3 items-center">
+                                Japanese
+                                <img src="/assets/jpn-flag.png" alt="Japanese flag" class="h-5 border-1 border-black">
+                            </span>
+                        </label>
+                    </form>
+                    <!-- the spinner -->
+                    <span class="loader h-24 w-24 hidden p-3 mx-5" id="spinner"></span>
+                    <!-- the output text box, swapped with selection form -->
+                    <div id="outputBox" class="hidden bg-gray-100 p-3 rounded-md mx-5 h-24 w-[75%] resize-none text-gray-700 placeholder-gray-400 placeholder:text-sm text-sm focus:outline-none focus:ring-2 focus:ring-PGblue">
+
+                    </div>
+                    <!-- the translate button -->
+                    <button class="bg-PGblue text-PGwhite h-8 w-[75%] rounded-md text-center my-5 hover:opacity-50 transition-all cursor-pointer disabled:opacity-25 disabled:cursor-wait" id="translate-btn">
+                        Translate
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
