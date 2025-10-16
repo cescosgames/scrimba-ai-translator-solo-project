@@ -64,10 +64,18 @@ Following the project guidelines, this project features...
 
 ## Reflection
 
-Where to start, this was a really exciting project! Implementing AI into a project in real life really changed my perspective on this whole
+Where to start, this was a really fun project! Implementing AI into a project in real life really changed my perspective on this whole
 process. This solo project was the conclusion of the 'Intro to AI Engineering' by Scrimba and I would say it nailed the title. I started this project
 having never attempted integrating AI into projects and at the end I've fully integrated the OpenAI API into my project. There is still so much
 to learn but we covered and implemented 1. using the OpenAI API (requests, models, tokens, messages, etc.) 2. beginner prompt-engineering 3. 
 parameters 4. prototyping and 5. other smaller concepts (temperature, few shot, stop sequence, penalties, etc.)
-
+<br>
 Excited to move on to the next project and keep learning this AI engineer path. My code isn't always perfect, so any comments or criticism are welcome!
+<br>
+<br>
+
+## Next steps
+
+1. Learn how to deploy and deploy the project live
+2. Add better error handling
+3. Turn into chat app (probably won't end up doing this one)
